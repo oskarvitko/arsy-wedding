@@ -1,0 +1,44 @@
+.progress-section {
+    padding: 3em 0;
+    background-color: #F5F3F2;
+}
+
+.progress {
+    width: 85%;
+    border-radius: 1.2em;
+    border: .2em solid #64666E;
+    margin: 0 auto;
+    padding: .3em;
+
+    &__line {
+        width: 25%;
+        height: 1em;
+        background-color: $color-primary-dark;
+        border-radius: 1.2em;
+        position: relative;
+
+        &-cursor {
+            left: 0;
+            top: -1.6em;
+            position: absolute;
+            color: #64666E;
+            font-family: 'IBM Plex Sans Thai';
+            font-style: normal;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: .2em;
+            padding-left: calc(100% - .6em);
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: .55em .4em 0 .4em;
+                border-color: #64666E transparent transparent transparent;
+            }
+        }
+    }
+}

@@ -1,20 +1,23 @@
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export const buildCssLoader = (isDev: boolean) => ({
-    test: /\.s[ac]ss$/i,
+    test: /\.(sa|sc|c)ss$/,
+    exclude: /\.module.(s[ac]ss)$/,
     use: [
         isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
         {
             loader: 'css-loader',
             options: {
-                modules: {
-                    auto: /\.module\./,
-                    localIdentName: isDev
-                        ? '[name]__[local]'
-                        : '[contenthash:base64:8]',
-                },
+                url: true,
+                sourceMap: isDev,
             },
         },
-        'sass-loader',
+        'postcss-loader',
+        {
+            loader: 'sass-loader',
+            options: {
+                sourceMap: isDev,
+            },
+        },
     ],
 })

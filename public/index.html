@@ -7,10 +7,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>Приглашение на свадьбу</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Iceland&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header>Шапка</header>
+    <main>
+        <section id="section-main" class="main">
+            <div class="container">
+                <div class="main__inner">
+                    <div class="main__inner-title">
+                        <h2>
+                            <span>Arseni</span><br>&<br>Alevtina
+                        </h2>
+                        <button class="app-btn app-btn-primary">CLICK HERE</button>
+                    </div>
+                    <div class="main__inner-photo">
+                        <img src="./images/main/photo.png" alt="Arseni & Alevtina">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-description" class="description">
+            <div class="container">
+                <p>Дорогие гости, мы рады сообщить вам, что мы женимся!<br>Приглашаем вас разделить этот счастливый и
+                    долгожданный для нас праздник.</p>
+            </div>
+        </section>
+        <section id="section-date" class="date">
+            <div class="date__inner">
+                <div class="date__inner-photo">
+                    <img src="./images/date/photo.png" alt="date">
+                </div>
+                <div class="date__inner-text">
+                    Дата<br>15 августа 2023<br>Время<br>15:30<br>Место<br>Усадьба оходник у дуба
+                </div>
+            </div>
+        </section>
+        <section id="section-colors" class="colors">
+            <div class="container">
+                <p>Мы будем благодарны , если при выборе нарядов или аксессуаров на наше торжество, Вы придержитесь
+                    следующей палитры:</p>
+                <div class="colors__items">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+        <section id="section-galery" class="galery">
+            <div>
+                <img data-fancybox="galery" src="./images/galery/1.png" alt="Arseni and Alevtina">
+            </div>
+            <div>
+                <img data-fancybox="galery" src="./images/galery/2.png" alt="Arseni and Alevtina">
+            </div>
+            <div>
+                <img data-fancybox="galery" src="./images/galery/3.png" alt="Arseni and Alevtina">
+            </div>
+            <div>
+                <img data-fancybox="galery" src="./images/galery/4.png" alt="Arseni and Alevtina">
+            </div>
+            <div>
+                <img data-fancybox="galery" src="./images/galery/5.png" alt="Arseni and Alevtina">
+            </div>
+            <div>
+                <img data-fancybox="galery" src="./images/galery/6.png" alt="Arseni and Alevtina">
+            </div>
+            <div>
+                <img data-fancybox="galery" src="./images/galery/7.png" alt="Arseni and Alevtina">
+            </div>
+        </section>
+        <section id="section-gifts" class="gifts">
+            <div class="container">
+                <h3>Подарки:</h3>
+                <p>Не волнуйтесь о подарках,
+                    мы будем очень рады вкладу
+                    в бюджет нашей молодой семьи,
+                    который поможет осуществить
+                    мечту о свадебном путешествии.<br>
+                    И мы просим Вас не дарить живые
+                    цветы, к сожалению мы не сможем
+                    насладиться их красотой
+                    до отъезда. Вместо них можете
+                    дарить сладости.</p>
+            </div>
+        </section>
+        <section id="section-confirm" class="confirm">
+            <div class="container">
+                <h3>Просим подвердить<br> ваше присутствие до 15.07.2023</h3>
+                <form action="/" class="confirm__form">
+                    <input type="text" name="name" placeholder="Ваше Имя" required>
+                    <input type="text" name="surname" placeholder="Ваша Фамилия" required>
+                    <label for="comment">Здесь Вы можете оставить<br>свои пожелания по музыке</label>
+                    <textarea id="comment" type="text" name="comment" placeholder="Ваш комментарий"></textarea>
+                    <div class="confirm__checkbox">
+                        <div>
+                            <input required name="confirmed" type="radio" id="no" value="0">
+                            <label for="no">Не буду</label>
+                        </div>
+                        <div>
+                            <input required name="confirmed" type="radio" id="yes" value="1">
+                            <label for="yes">Буду</label>
+                        </div>
+                    </div>
+                    <button type="submit">отправить</button>
+                </form>
+                <div class="confirm__music">
+                    <p>Если вы хотите сделать музыкальный номер для нас, то свяжитесь с Никитой</p>
+                    <a href="tel:+375292638683">+375292638683</a>
+                    <a target="_blank" href="https://www.instagram.com/nikita_kepel/">
+                        <img src="./icons/instagram.png" alt="@nikita_kepel">
+                        <span>@nikita_kepel</span></a>
+                </div>
+            </div>
+        </section>
+        <section id="section-progress" class="progress-section">
+            <div class="container">
+                <div class="progress">
+                    <div class="progress__line">
+                        <div class="progress__line-cursor">
+                            <span>25%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="countdown"></div>
+            </div>
+        </section>
+        <footer>
+            С любовью Арсений и Аляуцина
+        </footer>
+    </main>
 </body>
 
 </html>

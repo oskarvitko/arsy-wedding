@@ -6,13 +6,13 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 export const buildPlugins = (
     options: BuildOptions,
 ): WebpackPluginInstance[] => {
-    const { paths } = options
+    const { paths, isDev } = options
 
     const plugins = [
         new ProgressPlugin(),
         new HtmlWebpackPlugin({
             template: paths.html,
-            minify: false,
+            minify: !isDev,
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',

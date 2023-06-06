@@ -1,0 +1,14 @@
+.app-btn {
+    border: none;
+    background-color: $color-primary;
+    font-size: 1em;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+    cursor: pointer;
+    color: $color-white;
+    user-select: none;
+    padding: .5em .3em;
+    letter-spacing: -0.07em;
+    font-family: 'IM Fell French Canon SC', serif;
+}

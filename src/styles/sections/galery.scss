@@ -1,0 +1,16 @@
+.galery {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    padding: 0 2.8125em 2em 2.8125em;
+    gap: 1.25em;
+
+    div {
+        min-width: 18.75em;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}

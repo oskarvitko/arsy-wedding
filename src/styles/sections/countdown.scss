@@ -1,0 +1,75 @@
+$color-countdown: $color-primary-dark;
+
+.lightcountdown {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: 700;
+    font-weight: 400;
+}
+
+.lightcountdown__digits {
+    font-family: 'Arial';
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: $color-countdown;
+    border-radius: .2em;
+    padding: .05em .1em;
+    color: $color-white;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        height: .03em;
+        width: 100%;
+        position: absolute;
+        background-color: $color-white;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+        border-left: .1em solid $color-white;
+        border-right: .1em solid $color-white;
+        height: .1em;
+    }
+}
+
+.lightcountdown__digit {
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.lightcountdown__delimeter {
+    color: transparent;
+}
+
+.lightcountdown__text {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.275em;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+    margin-top: 1em;
+
+    color: $color-countdown;
+}

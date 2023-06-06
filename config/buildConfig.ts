@@ -15,6 +15,7 @@ export const buildWebpackConfig = (options: BuildOptions): Configuration => {
             filename: '[name].[contenthash].js',
             path: paths.build,
             clean: true,
+            assetModuleFilename: 'assets/[hash:6][ext]',
         },
         plugins: buildPlugins(options),
         module: {
