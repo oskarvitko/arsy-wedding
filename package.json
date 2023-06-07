@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/index.js --env mode=production",
     "start:server:dev": "nodemon server/index.js",
-    "start:dev": "webpack serve --env port=6464",
+    "start:dev": "webpack serve --env port=6454",
     "build": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development"
   },

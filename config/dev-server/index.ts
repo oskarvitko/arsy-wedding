@@ -11,5 +11,12 @@ export const buildDevServer = (
         open: true,
         historyApiFallback: true,
         hot: true,
+        host: '0.0.0.0',
+        allowedHosts: 'all',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': '*',
+            'Access-Control-Allow-Headers': '*',
+        },
     }
 }

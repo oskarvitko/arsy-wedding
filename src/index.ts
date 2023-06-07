@@ -4,5 +4,7 @@ import '@fancyapps/ui/dist/fancybox.css'
 import './styles/index.scss'
 
 import initCountdown from './components/countdown'
+import { initHand } from 'components/hand'
 
 initCountdown()
+initHand()
