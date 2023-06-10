@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <div id="alert" class="alert">Что-то пошло не так</div>
     <main>
         <section id="section-main" class="main">
             <div class="container">
@@ -22,7 +23,8 @@
                         <h2>
                             <span>Arseni</span><br>&<br>Alevtina
                         </h2>
-                        <button class="app-btn app-btn-primary">CLICK HERE</button>
+                        <a href="./video/video.mp4" data-fancybox class="app-btn app-btn-primary main__btn">CLICK
+                            HERE</a>
                     </div>
                     <div class="main__inner-photo">
                         <img src="./images/main/photo.png" alt="Arseni & Alevtina">
@@ -102,7 +104,7 @@
         <section id="section-confirm" class="confirm">
             <div class="container">
                 <h3>Просим подвердить<br> ваше присутствие до 15.07.2023</h3>
-                <form action="/" class="confirm__form">
+                <form id="form" action="/" class="confirm__form">
                     <input type="text" name="name" placeholder="Ваше Имя" required>
                     <input type="text" name="surname" placeholder="Ваша Фамилия" required>
                     <label for="comment">Здесь Вы можете оставить<br>свои пожелания по музыке</label>
@@ -117,7 +119,8 @@
                             <label for="yes">Буду</label>
                         </div>
                     </div>
-                    <button type="submit">отправить</button>
+                    <button id="change-data" type="button">изменить ответ</button>
+                    <button type="submit" class="show">отправить</button>
                 </form>
                 <div class="confirm__music">
                     <p>Если вы хотите сделать музыкальный номер для нас, то свяжитесь с Никитой</p>

@@ -45,25 +45,25 @@
 @keyframes hand-pulse {
     0% {
         transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(#e9c096, 0.7);
+        box-shadow: 0 0 0 0 rgba(#ffffff, 0.7);
         background-color: transparent;
     }
 
     20% {
         transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(#e9c096, 0.7);
-        background-color: #e9c096;
+        box-shadow: 0 0 0 0 rgba(#ffffff, 0.7);
+        background-color: #ffffff;
     }
 
     70% {
         transform: scale(1);
-        box-shadow: 0 0 0 3em rgba(#e9c096, 0);
+        box-shadow: 0 0 0 3em rgba(#ffffff, 0);
         background-color: transparent;
     }
 
     100% {
         transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(#e9c096, 0);
+        box-shadow: 0 0 0 0 rgba(#ffffff, 0);
         background-color: transparent;
     }
 }

@@ -43,7 +43,6 @@ footer {
 }
 
 
-
 @keyframes flip {
     0% {
         transform: rotateX(0);
@@ -54,4 +53,27 @@ footer {
         transform: rotateX(-362deg);
         color: $color-white;
     }
+}
+
+.has-html5video {
+    &::before {
+        margin: 0;
+    }
+
+    &>div {
+        border-radius: 3em !important;
+    }
+
+    video {
+        border-radius: 3em;
+        height: 40em;
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+}
+
+.hidden {
+    opacity: 0;
 }

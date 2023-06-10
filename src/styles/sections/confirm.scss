@@ -57,6 +57,18 @@
             border-radius: 1.1em;
             padding: .4em 1em .5em;
             color: #000;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+        }
+
+        input,
+        textarea {
+            &:disabled {
+                opacity: .6;
+            }
         }
     }
 

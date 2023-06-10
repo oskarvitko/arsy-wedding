@@ -38,7 +38,10 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^4.0.8",
+    "animate.css": "^4.1.1",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "csv": "^6.3.1",
+    "express": "^4.18.2",
+    "telegraf": "^4.12.2"
   }
 }

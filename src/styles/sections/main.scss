@@ -4,6 +4,10 @@
     position: relative;
     overflow: hidden;
 
+    &__btn {
+        text-decoration: none;
+    }
+
     &__inner {
         display: flex;
         align-items: center;
