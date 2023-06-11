@@ -8,7 +8,7 @@ const { Telegraf } = require('telegraf')
 
 const PORT = process.env.PORT || 6000
 const TOKEN = '5967920692:AAFt5Knf8ygYGNiZrGq0UsDmRaKSeoJETb0'
-const ids = [668975944]
+const ids = [668975944, 634130116, 1006555366]
 
 const bot = new Telegraf(TOKEN)
 
