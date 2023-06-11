@@ -26,7 +26,7 @@ html {
 body {
     color: $color-primary;
     background-color: $color-white;
-    font-family: 'IM Fell French Canon SC', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 footer {
@@ -56,7 +56,8 @@ footer {
 }
 
 .has-html5video {
-    padding-top: 20px;
+    padding: 2em;
+    padding-top: 3em;
 
     &::before {
         margin: 0;
@@ -68,7 +69,7 @@ footer {
 
     video {
         border-radius: 3em;
-        height: 41.4em;
+        height: 40em;
 
         &:focus {
             outline: none !important;

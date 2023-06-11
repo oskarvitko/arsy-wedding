@@ -9,9 +9,11 @@ import { initHand } from 'components/hand'
 import { initForm } from 'components/form/ui'
 import { initTitle } from 'components/title'
 import { initAnimations } from 'components/animation'
+import { initArrow } from 'components/arrow'
 
 initCountdown()
 initHand()
 initForm()
 initTitle()
 initAnimations()
+initArrow()

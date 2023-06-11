@@ -21,6 +21,14 @@ export const getNodes = (): Options[] => [
         groups: [[0, 1], [2], [3, 4]],
     },
     {
+        sectionSelector: '#section-main',
+        selectors: [
+            '#section-main > div > div > div.main__inner-title > .main__arrow',
+        ],
+        animation: 'animate',
+        firstDelay: 2000,
+    },
+    {
         sectionSelector: '#section-colors',
         selectors: [
             '#section-colors > div > p',
@@ -36,7 +44,7 @@ export const getNodes = (): Options[] => [
             'animate__fadeInUp',
             'animate__fadeInUp',
         ],
-        firstDelay: 1000,
+        firstDelay: 300,
         delay: 300,
     },
     {

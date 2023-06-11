@@ -36,7 +36,7 @@ const getText = (): {
                 short: 'вам',
             }
         }
-        case 'y': {
+        case 'u': {
             return {
                 dear: 'Дорогой гость',
                 lets: 'Приглашаем тебя',

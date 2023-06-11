@@ -9,7 +9,8 @@
     <title>Приглашение на свадьбу</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Iceland&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Iceland&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -23,8 +24,13 @@
                         <h2>
                             <span>Arseni</span><br>&<br>Alevtina
                         </h2>
-                        <a href="./video/video.mp4" data-fancybox class="app-btn app-btn-primary main__btn">CLICK
-                            HERE</a>
+                        <a href="./video/video.mp4" data-fancybox
+                            class="app-btn app-btn-primary main__btn animate__animated  animate__pulse  animate__infinite">CLICK
+                            HERE
+                        </a>
+                        <div class="main__arrow">
+                            <img src="./icons/arrow.svg" alt="">
+                        </div>
                     </div>
                     <div class="main__inner-photo">
                         <img src="./images/main/photo.png" alt="Arseni & Alevtina">
@@ -107,8 +113,6 @@
                 <form id="form" action="/" class="confirm__form">
                     <input type="text" name="name" placeholder="Ваше Имя" required>
                     <input type="text" name="surname" placeholder="Ваша Фамилия" required>
-                    <label for="comment">Здесь Вы можете оставить<br>свои пожелания по музыке</label>
-                    <textarea id="comment" type="text" name="comment" placeholder="Ваш комментарий"></textarea>
                     <div class="confirm__checkbox">
                         <div>
                             <input required name="confirmed" type="radio" id="no" value="0">
@@ -119,6 +123,9 @@
                             <label for="yes">Буду</label>
                         </div>
                     </div>
+                    <label for="comment">Здесь Вы можете оставить<br>свои пожелания по музыке</label>
+                    <textarea id="comment" type="text" name="comment" placeholder="Ваш комментарий"></textarea>
+
                     <button id="change-data" type="button">изменить ответ</button>
                     <button type="submit" class="show">отправить</button>
                 </form>
@@ -144,7 +151,7 @@
             </div>
         </section>
         <footer>
-            С любовью Арсений и Аляуцина
+            С любовью Арсений и Алевтина
         </footer>
     </main>
 </body>

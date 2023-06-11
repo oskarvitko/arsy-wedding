@@ -45,6 +45,9 @@ const getMessage = (data, updated) => {
 
 const app = express()
 
+app.set('views', 'build')
+app.set('view engine', 'html')
+app.engine('html', require('ejs').renderFile)
 app.use(cors())
 app.use(express.json())
 app.use(express.static('build'))
@@ -84,9 +87,81 @@ app.get('/api/:id', (req, res) => {
 })
 
 app.get('*', (req, res) => {
-    res.render('build/index.html')
+    res.render('index.html')
 })
 
+bot.command('list', (ctx) => {
+    const rep = new UserDataRepository()
+    rep.getList(async (data) => {
+        if (!data.length) {
+            return ctx.reply('Список пуст.')
+        }
+
+        const messages = getListMessages(data)
+
+        for (message of messages) {
+            await ctx.reply(message, { parse_mode: 'HTML' })
+        }
+    })
+})
+
+bot.command('yes', (ctx) => {
+    const rep = new UserDataRepository()
+    rep.getList(async (data) => {
+        const list = data.filter((item) => item.willBe)
+
+        if (!list.length) {
+            return ctx.reply('Список пуст.')
+        }
+
+        const messages = getListMessages(list)
+
+        for (message of messages) {
+            await ctx.reply('<b>Гости которые будут:</b>\n' + message, {
+                parse_mode: 'HTML',
+            })
+        }
+    })
+})
+
+bot.command('no', (ctx) => {
+    const rep = new UserDataRepository()
+    rep.getList(async (data) => {
+        const list = data.filter((item) => !item.willBe)
+
+        if (!list.length) {
+            return ctx.reply('Список пуст.')
+        }
+
+        const messages = getListMessages(list)
+
+        for (message of messages) {
+            await ctx.reply('<b>Гости которые НЕ будут:</b>\n' + message, {
+                parse_mode: 'HTML',
+            })
+        }
+    })
+})
+
+bot.telegram.setMyCommands([
+    {
+        name: 'list',
+        command: 'list',
+        description: 'Список всех ответов',
+    },
+    {
+        name: 'yes',
+        command: 'yes',
+        description: 'Список всех положительных ответов',
+    },
+    {
+        name: 'no',
+        command: 'no',
+        description: 'Список всех отприцательных ответов',
+    },
+])
+
+bot.launch()
 app.listen(PORT, () => {
     console.log(`Server started on  http://localhost:${PORT}...`)
 })
@@ -181,4 +256,24 @@ class UserDataRepository {
             })
         })
     }
+}
+
+const getListMessages = (list) => {
+    const message = list
+        .map((item, i) => {
+            const rows = [
+                `<b>${i + 1}.${item.willBe ? '✅' : '⛔'} ${item.name} ${
+                    item.surname
+                }</b>`,
+            ]
+
+            if (item.comment) {
+                rows.push(`<b>Комментарий:</b> ${item.comment}`)
+            }
+
+            return rows.join('\n')
+        })
+        .join('\n')
+
+    return [message]
 }

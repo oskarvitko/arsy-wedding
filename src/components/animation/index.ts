@@ -15,7 +15,7 @@ export const initAnimations = () => {
         const item = localStorage.getItem('animationInited')
         if (item) inited = true
         else {
-            // localStorage.setItem('animationInited', 'true')
+            localStorage.setItem('animationInited', 'true')
             inited = false
         }
     } catch (e) {
