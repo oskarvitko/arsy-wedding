@@ -45,21 +45,4 @@ export const getNodes = (): Options[] => [
         animation: ['animate__fadeIn'],
         firstDelay: 500,
     },
-    {
-        sectionSelector: '#section-confirm > div > div',
-        selectors: [
-            '#section-confirm > div > div > p',
-            '#section-confirm > div > div > a:nth-child(2)',
-            '#section-confirm > div > div > a:nth-child(3)',
-        ],
-        animation: ['animate__flipInY', 'animate__flipInY', 'animate__flipInY'],
-        delay: 100,
-        firstDelay: 300,
-    },
-    {
-        sectionSelector: '#section-progress',
-        selectors: ['#section-progress > div'],
-        animation: ['animate__flipInX'],
-        firstDelay: 300,
-    },
 ]

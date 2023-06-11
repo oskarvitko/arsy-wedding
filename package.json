@@ -38,6 +38,7 @@
   "dependencies": {
     "@fancyapps/ui": "^4.0.8",
     "animate.css": "^4.1.1",
+    "copy-webpack-plugin": "^11.0.0",
     "cors": "^2.8.5",
     "csv": "^6.3.1",
     "dotenv": "^16.0.3",

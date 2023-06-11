@@ -56,6 +56,8 @@ footer {
 }
 
 .has-html5video {
+    padding-top: 20px;
+
     &::before {
         margin: 0;
     }
@@ -66,11 +68,17 @@ footer {
 
     video {
         border-radius: 3em;
-        height: 40em;
+        height: 41.4em;
 
         &:focus {
             outline: none !important;
         }
+    }
+
+    & button.is-close {
+        transform: scale(1.2);
+        top: 8px !important;
+        right: 8px !important;
     }
 }
 
