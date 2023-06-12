@@ -10,20 +10,6 @@ export interface Options {
 }
 
 export const initAnimations = () => {
-    let inited = true
-    try {
-        const item = localStorage.getItem('animationInited')
-        if (item) inited = true
-        else {
-            localStorage.setItem('animationInited', 'true')
-            inited = false
-        }
-    } catch (e) {
-        inited = false
-    }
-
-    if (inited) return
-
     const nodes = getNodes()
 
     nodes.forEach(initAnimation)
