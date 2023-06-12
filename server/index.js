@@ -259,30 +259,35 @@ class UserDataRepository {
 }
 
 const getListMessages = (list) => {
-    const message = list
-        .map((item, i) => {
-            const rows = [
-                `<b>${i + 1}.${item.willBe ? '✅' : '⛔'} ${item.name} ${
-                    item.surname
-                }</b>`,
-            ]
+    const splitted = splitList(list)
+    const messages = splitted.map((list) =>
+        list
+            .map((item, i) => {
+                const rows = [
+                    `<b>${i + 1}.${item.willBe ? '✅' : '⛔'} ${item.name} ${
+                        item.surname
+                    }</b>`,
+                ]
 
-            if (item.comment) {
-                rows.push(`<b>Комментарий:</b> ${item.comment}`)
-            }
+                if (item.comment) {
+                    rows.push(`<b>Комментарий:</b> ${item.comment}`)
+                }
 
-            return rows.join('\n')
-        })
-        .join('\n')
+                return rows.join('\n')
+            })
+            .join('\n'),
+    )
 
-    return splitStr(message, 4096)
+    return messages
 }
 
-const splitStr = (str, charCount) => {
-    if (str.length < charCount) return str
-
-    const regexp = new RegExp(`.{1,${charCount}}`, 'g')
-    const splitted = str.match(regexp)
-
-    return splitted
+const splitList = (list) => {
+    const array = [...list]
+    const chunkSize = 50
+    const result = []
+    for (let i = 0; i < array.length; i += chunkSize) {
+        const chunk = array.slice(i, i + chunkSize)
+        result.push(chunk)
+    }
+    return result
 }
