@@ -275,5 +275,14 @@ const getListMessages = (list) => {
         })
         .join('\n')
 
-    return [message]
+    return splitStr(message, 4096)
+}
+
+const splitStr = (str, charCount) => {
+    if (str.length < charCount) return str
+
+    const regexp = new RegExp(`.{1,${charCount}}`, 'g')
+    const splitted = str.match(regexp)
+
+    return splitted
 }
